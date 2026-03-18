@@ -52,6 +52,8 @@ symlinkJoin {
     entrypoint="$(find "${basePackage}/share/${manifest.package.repo}/node_modules" -path "*/node_modules/${manifest.package.npmName}/${manifest.binary.entrypoint}" | head -n 1)"
     cat > "$out/bin/${manifest.binary.name}" <<EOF
 #!${lib.getExe bash}
+export DISABLE_AUTOUPDATER=1
+unset DEV
 exec ${lib.getExe' bun "bun"} "$entrypoint" "\$@"
 EOF
     chmod +x "$out/bin/${manifest.binary.name}"
