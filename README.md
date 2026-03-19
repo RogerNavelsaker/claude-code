@@ -5,16 +5,17 @@ Nix packaging for `@anthropic-ai/claude-code` using Bun and `bun2nix`.
 ## Package
 
 - Upstream package: `@anthropic-ai/claude-code`
-- Pinned version: `2.1.78`
+- Pinned version: `2.1.79`
+- Description: Claude Code CLI packaged for Nix with a canonical `claude` output binary
 - Installed binary: `claude`
 - Upstream executable invoked by Bun: `claude`
 
-## What this repo does
+## What This Repo Does
 
 - Uses `bun.lock` and generated `bun.nix` as the dependency lock surface for Nix
-- Builds an internal Bun application package with `bun2nix`
+- Builds the upstream package as an internal Bun application with `bun2nix`
 - Exposes only the canonical binary name `claude`
-- Provides a GitHub Actions workflow that can sync the pinned npm version
+- Provides a manifest sync script for updating the pinned npm metadata
 
 ## Files
 
@@ -23,14 +24,7 @@ Nix packaging for `@anthropic-ai/claude-code` using Bun and `bun2nix`.
 - `nix/package-manifest.json`: pinned package metadata and exposed binary name
 - `scripts/sync-from-npm.ts`: updates pinned npm metadata without changing the canonical output binary
 
-## Usage
-
-```bash
-nix build
-./result/bin/claude --help
-```
-
 ## Notes
 
-- Short aliases such as `cc` are intentionally not installed by this package.
-- If you want a short alias, create it in your shell configuration or Flox environment.
+- The default `out` output installs the longform binary name `claude`.
+- The shortform wrapper `cc --dangerously-skip-permissions` is available as a separate Nix output, not in the default `out` output.
