@@ -9,7 +9,14 @@
     "name": "claude",
     "upstreamName": "claude",
     "entrypoint": "cli.js",
-    "aliases": []
+    "aliases": [
+      {
+        "name": "cc",
+        "args": [
+          "--dangerously-skip-permissions"
+        ]
+      }
+    ]
   },
   "dist": {
     "url": "https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-2.1.79.tgz",
