@@ -1,4 +1,4 @@
-# claude-code
+# nixpkg-claude-code
 
 Nix packaging for `@anthropic-ai/claude-code` using Bun and `bun2nix`.
 
