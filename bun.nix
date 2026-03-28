@@ -13,9 +13,9 @@
   ...
 }:
 {
-  "@anthropic-ai/claude-code@2.1.85" = fetchurl {
-    url = "https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-2.1.85.tgz";
-    hash = "sha512-3/q3xTpk9EnBfQ/XsHGkOZniOgQx4sqD95CDKw1mvN1Qw5+9IZTp6ILdds02d7vOM6YuLL0G0zhqsMSAFVse4w==";
+  "@anthropic-ai/claude-code@2.1.86" = fetchurl {
+    url = "https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-2.1.86.tgz";
+    hash = "sha512-Kd26SOYr9ULjSBTt8aPPhS6OkLKBV7qO9rFRWufK5U+WP219YJSbHO9erePtLxvOVl4/OmW/KHE2fqdW0McDNA==";
   };
   "@img/sharp-darwin-arm64@0.34.5" = fetchurl {
     url = "https://registry.npmjs.org/@img/sharp-darwin-arm64/-/sharp-darwin-arm64-0.34.5.tgz";
