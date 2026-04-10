@@ -9,7 +9,7 @@
     "sync:manifest": "bun run sync:npm-source",
     "sync:npm-source": "bun run scripts/sync-from-npm.ts",
     "sync:github-source": "bun run scripts/sync-from-github.ts",
-    "postinstall": "bunx bun2nix -o bun.nix"
+    "postinstall": "bun x bun2nix -o bun.nix"
   },
   "dependencies": {
     "@anthropic-ai/claude-code": "2.1.101"
