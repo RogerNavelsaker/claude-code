@@ -3,7 +3,7 @@
   "package": {
     "repo": "claude-code",
     "npmName": "@anthropic-ai/claude-code",
-    "version": "2.1.110"
+    "version": "2.1.111"
   },
   "binary": {
     "name": "claude",
@@ -19,8 +19,8 @@
     ]
   },
   "dist": {
-    "url": "https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-2.1.110.tgz",
-    "hash": "sha512-H+SIbTIQlsVEhtS/+l3088uUMjGnOPigUl8PaYVE85z8mMnS0RIsy0R4QKGKIYQW/5iYjyUj+jPf5WhI0lvxLQ=="
+    "url": "https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-2.1.111.tgz",
+    "hash": "sha512-zNZcINqvtMpDM4lZqnOZcrou57k9rUBfCZziH47nMG9FNks7I6azN7+SMU3zhwqBwYrvx6o4i7Ecu7mDCi0AmA=="
   },
   "meta": {
     "description": "Use Claude, Anthropic's AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
