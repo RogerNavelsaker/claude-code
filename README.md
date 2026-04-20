@@ -1,20 +1,20 @@
 # nixpkg-claude-code
 
-Nix packaging for `@anthropic-ai/claude-code` using Bun and `bun2nix`.
+Nix packaging for `@anthropic-ai/claude-code`.
 
 ## Package
 
 - Upstream package: `@anthropic-ai/claude-code`
-- Pinned version: `2.1.79`
-- Description: Claude Code CLI packaged for Nix with a canonical `claude` output binary
+- Pinned version: `2.1.114`
+- Description: Claude Code CLI packaged for Nix with canonical `claude` and `cc` outputs
 - Installed binary: `claude`
-- Upstream executable invoked by Bun: `claude`
+- Alias output: `cc --dangerously-skip-permissions`
 
 ## What This Repo Does
 
 - Uses `bun.lock` and generated `bun.nix` as the dependency lock surface for Nix
-- Builds the upstream package as an internal Bun application with `bun2nix`
-- Exposes only the canonical binary name `claude`
+- Pins the upstream dispatcher package and its platform-specific optional dependencies
+- Packages the matching upstream native binary directly for the current target platform
 - Provides a manifest sync script for updating the pinned npm metadata
 
 ## Files
@@ -22,9 +22,9 @@ Nix packaging for `@anthropic-ai/claude-code` using Bun and `bun2nix`.
 - `flake.nix`: flake entrypoint
 - `nix/package.nix`: Nix derivation
 - `nix/package-manifest.json`: pinned package metadata and exposed binary name
-- `scripts/sync-from-npm.ts`: updates pinned npm metadata without changing the canonical output binary
+- `scripts/sync-from-npm.ts`: updates pinned npm metadata
 
 ## Notes
 
-- The default `out` output installs the longform binary name `claude`.
-- The shortform wrapper `cc --dangerously-skip-permissions` is available as a separate Nix output, not in the default `out` output.
+- The default `out` output installs `claude`.
+- The `cc` wrapper is exposed as a separate Nix output on the same derivation.

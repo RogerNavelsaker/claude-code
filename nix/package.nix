@@ -1,4 +1,4 @@
-{ bash, bun, bun2nix, lib, makeWrapper, symlinkJoin }:
+{ bash, bun2nix, lib, stdenv, symlinkJoin }:
 
 let
   manifest = builtins.fromJSON (builtins.readFile ./package-manifest.json);
@@ -14,6 +14,20 @@ let
     if builtins.hasAttr manifest.meta.licenseSpdx licenseMap
     then licenseMap.${manifest.meta.licenseSpdx}
     else lib.licenses.unfree;
+  bundledBinaryPackage =
+    {
+      x86_64-linux =
+        if stdenv.hostPlatform.isMusl
+        then "@anthropic-ai/claude-code-linux-x64-musl"
+        else "@anthropic-ai/claude-code-linux-x64";
+      aarch64-linux =
+        if stdenv.hostPlatform.isMusl
+        then "@anthropic-ai/claude-code-linux-arm64-musl"
+        else "@anthropic-ai/claude-code-linux-arm64";
+      x86_64-darwin = "@anthropic-ai/claude-code-darwin-x64";
+      aarch64-darwin = "@anthropic-ai/claude-code-darwin-arm64";
+    }.${stdenv.hostPlatform.system}
+      or (throw "unsupported Claude Code bundled package for ${stdenv.hostPlatform.system}");
   aliasSpecs = map (
     alias:
     if builtins.isString alias then
@@ -79,16 +93,18 @@ symlinkJoin {
   name = "${manifest.binary.name}-${packageVersion}";
   outputs = [ "out" ] ++ map (alias: alias.name) aliasSpecs;
   paths = [ basePackage ];
-  nativeBuildInputs = [ makeWrapper ];
   postBuild = ''
     rm -rf "$out/bin"
     mkdir -p "$out/bin"
-    entrypoint="$(find "${basePackage}/share/${manifest.package.repo}/node_modules" -path "*/node_modules/${manifest.package.npmName}/${manifest.binary.entrypoint}" | head -n 1)"
+    mkdir -p "$out/share/${manifest.binary.name}"
+    bundledBinaryPath="$(find "${basePackage}/share/${manifest.package.repo}/node_modules/.bun" -path "*/node_modules/${bundledBinaryPackage}/claude" | head -n 1)"
+    cp "$bundledBinaryPath" "$out/share/${manifest.binary.name}/${manifest.binary.name}"
+    chmod +x "$out/share/${manifest.binary.name}/${manifest.binary.name}"
     cat > "$out/bin/${manifest.binary.name}" <<EOF
 #!${lib.getExe bash}
 export DISABLE_AUTOUPDATER=1
 unset DEV
-exec ${lib.getExe' bun "bun"} "$entrypoint" "\$@"
+exec "$out/share/${manifest.binary.name}/${manifest.binary.name}" "\$@"
 EOF
     chmod +x "$out/bin/${manifest.binary.name}"
     ${aliasOutputLinks}
