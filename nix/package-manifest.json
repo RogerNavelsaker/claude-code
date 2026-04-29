@@ -9,6 +9,7 @@
     "name": "claude",
     "upstreamName": "claude",
     "entrypoint": "bin/claude.exe",
+    "binaryPath": "claude",
     "aliases": [
       {
         "name": "cc",
