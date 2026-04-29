@@ -23,7 +23,7 @@
         "aarch64-darwin"
       ];
       forAllSystems = f: nixpkgs.lib.genAttrs systems (system: f {
-        pkgs = import nixpkgs { inherit system; };
+        pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
       });
     in {
       packages = forAllSystems ({ pkgs }: {
