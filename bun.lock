@@ -1,0 +1,49 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "@rona/nix-claude-code",
+      "dependencies": {
+        "@anthropic-ai/claude-code": "2.1.123",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.3.10",
+        "bun2nix": "2.0.8",
+      },
+    },
+  },
+  "packages": {
+    "@anthropic-ai/claude-code": ["@anthropic-ai/claude-code@2.1.123", "", { "optionalDependencies": { "@anthropic-ai/claude-code-darwin-arm64": "2.1.123", "@anthropic-ai/claude-code-darwin-x64": "2.1.123", "@anthropic-ai/claude-code-linux-arm64": "2.1.123", "@anthropic-ai/claude-code-linux-arm64-musl": "2.1.123", "@anthropic-ai/claude-code-linux-x64": "2.1.123", "@anthropic-ai/claude-code-linux-x64-musl": "2.1.123", "@anthropic-ai/claude-code-win32-arm64": "2.1.123", "@anthropic-ai/claude-code-win32-x64": "2.1.123" }, "bin": { "claude": "bin/claude.exe" } }, "sha512-31P5v1NOrJF8Cud5P5nuqYSP3XjJdR/PfCQgDM7fCIHbh+34Ds/DWaLjhdqcyUnZ0PINnEpvk/+MM8DhbXOUlw=="],
+
+    "@anthropic-ai/claude-code-darwin-arm64": ["@anthropic-ai/claude-code-darwin-arm64@2.1.123", "", { "os": "darwin", "cpu": "arm64" }, "sha512-U6w4JuPn7DQi7BwIP87RuEpHMeQqCoU6sbodo3EkJxmrdJK6MBXiN+hu+B+WzsPnIQSTumeBHF9tizwLs5GxUA=="],
+
+    "@anthropic-ai/claude-code-darwin-x64": ["@anthropic-ai/claude-code-darwin-x64@2.1.123", "", { "os": "darwin", "cpu": "x64" }, "sha512-yuCQZl1Jm9efL3ky2skPliHT9WATfHbChUxIhzXN/hC5hK8AX48j9jww9/U1QUvdiCoo6hCYVHTXWRRcZTfWpg=="],
+
+    "@anthropic-ai/claude-code-linux-arm64": ["@anthropic-ai/claude-code-linux-arm64@2.1.123", "", { "os": "linux", "cpu": "arm64" }, "sha512-0bh79r+uAPMB8/KbLefCdh4CosOO0RgVSIGi51X123eW0zNHRMCXvq16KNBkPE5LupHOzHBp4UgihGvkrxEjOA=="],
+
+    "@anthropic-ai/claude-code-linux-arm64-musl": ["@anthropic-ai/claude-code-linux-arm64-musl@2.1.123", "", { "os": "linux", "cpu": "arm64" }, "sha512-e8EhzMCjirqSx5bzXErM2dG1i7Q1BQAviaxBEQ4z0FFFrkibzH1XrKK3RIu4QbOzIBuE1+HrSmYVN6AtvFJ9YA=="],
+
+    "@anthropic-ai/claude-code-linux-x64": ["@anthropic-ai/claude-code-linux-x64@2.1.123", "", { "os": "linux", "cpu": "x64" }, "sha512-cDi/khmvtvgtzypy1xvd9nIqWDRPaEwh3qJVewIhr847wSrCC/S9HBNsUcdaR+myHiXH/ew6prpA4xR9qeEwhA=="],
+
+    "@anthropic-ai/claude-code-linux-x64-musl": ["@anthropic-ai/claude-code-linux-x64-musl@2.1.123", "", { "os": "linux", "cpu": "x64" }, "sha512-CRBoco+wha2xtFyb9KaHLLnh+TCtzMv8h6ebl4ODGi16atjwv6OQQsU0soQUWqXwBFsaGNLEZdhXFQ7QnBV0kA=="],
+
+    "@anthropic-ai/claude-code-win32-arm64": ["@anthropic-ai/claude-code-win32-arm64@2.1.123", "", { "os": "win32", "cpu": "arm64" }, "sha512-R/+fItAHvyWVq21ip6dBBIaKRRaoazVDbI5Cnkf3tP1v3543dconQb+lXyByPu3m1GTpJdbEYUcxr4K5CAw1iw=="],
+
+    "@anthropic-ai/claude-code-win32-x64": ["@anthropic-ai/claude-code-win32-x64@2.1.123", "", { "os": "win32", "cpu": "x64" }, "sha512-3IdxNUZ3SXu8cTQA01Eh8I62XQXzYpNVJWRA65CA0yD6cSN38PGovbAzeoSDXsTZchMTv27JyjylSLabLP0pmA=="],
+
+    "@types/bun": ["@types/bun@1.3.10", "", { "dependencies": { "bun-types": "1.3.10" } }, "sha512-0+rlrUrOrTSskibryHbvQkDOWRJwJZqZlxrUs1u4oOoTln8+WIXBPmAuCF35SWB2z4Zl3E84Nl/D0P7803nigQ=="],
+
+    "@types/node": ["@types/node@25.5.0", "", { "dependencies": { "undici-types": "~7.18.0" } }, "sha512-jp2P3tQMSxWugkCUKLRPVUpGaL5MVFwF8RDuSRztfwgN1wmqJeMSbKlnEtQqU8UrhTmzEmZdu2I6v2dpp7XIxw=="],
+
+    "bun-types": ["bun-types@1.3.10", "", { "dependencies": { "@types/node": "*" } }, "sha512-tcpfCCl6XWo6nCVnpcVrxQ+9AYN1iqMIzgrSKYMB/fjLtV2eyAVEg7AxQJuCq/26R6HpKWykQXuSOq/21RYcbg=="],
+
+    "bun2nix": ["bun2nix@2.0.8", "", { "dependencies": { "sade": "^1.8.1" }, "bin": { "bun2nix": "index.ts" } }, "sha512-pwq35hA81X1Kjsi5Xo69Aii9aY3zZHhWXwqF1QRz/uB35KzKbwJZ16WrhadiG9/T6bjOsRrPZtzuAyqmlXopLw=="],
+
+    "mri": ["mri@1.2.0", "", {}, "sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA=="],
+
+    "sade": ["sade@1.8.1", "", { "dependencies": { "mri": "^1.1.0" } }, "sha512-xal3CZX1Xlo/k4ApwCFrHVACi9fBqJ7V+mwhBsuf/1IOKbBy098Fex+Wa/5QMubw09pSZ/u8EY8PWgevJsXp1A=="],
+
+    "undici-types": ["undici-types@7.18.2", "", {}, "sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w=="],
+  }
+}

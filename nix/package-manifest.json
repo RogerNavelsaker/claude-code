@@ -3,7 +3,7 @@
   "package": {
     "repo": "claude-code",
     "npmName": "@anthropic-ai/claude-code",
-    "version": "2.1.114"
+    "version": "2.1.123"
   },
   "binary": {
     "name": "claude",
@@ -20,40 +20,8 @@
     ]
   },
   "dist": {
-    "url": "https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-2.1.114.tgz",
-    "hash": "sha512-RPhw1ClFxzOESQdI+bXYp35IXlhS/bi75VIajQgrg11qH10k5jiYZ+ivz1dTN6rbeii+zaCuhjpMzKfdtN/JTw==",
-    "platforms": {
-      "x86_64-linux": {
-        "package": "@anthropic-ai/claude-code-linux-x64",
-        "url": "https://registry.npmjs.org/@anthropic-ai/claude-code-linux-x64/-/claude-code-linux-x64-2.1.114.tgz",
-        "hash": "sha512-4YX0ataEGqtgmXoYf97YQnbzh0xwegH4ZFP5d5LXBlJIXAB26cSIBNBPE+Eln8evguGJ9QzmHQBhSTdOl0DQAw=="
-      },
-      "x86_64-linux-musl": {
-        "package": "@anthropic-ai/claude-code-linux-x64-musl",
-        "url": "https://registry.npmjs.org/@anthropic-ai/claude-code-linux-x64-musl/-/claude-code-linux-x64-musl-2.1.114.tgz",
-        "hash": "sha512-kq7LDpUFzn/X4Iom3u5whbmtZmDjKI7cOPCo9UhGwivU8zKYGiIemkNlwManz01i6Ct4/kSZH8sWNAHvDm0pTQ=="
-      },
-      "aarch64-linux": {
-        "package": "@anthropic-ai/claude-code-linux-arm64",
-        "url": "https://registry.npmjs.org/@anthropic-ai/claude-code-linux-arm64/-/claude-code-linux-arm64-2.1.114.tgz",
-        "hash": "sha512-eIJaynRIzbWSmspLvrPZDXlKp+Jd3omi94sLdHznrzqRrU98eNEXNaBlcQQx1A5hbOEo2cx0QXOZV3idpeirPQ=="
-      },
-      "aarch64-linux-musl": {
-        "package": "@anthropic-ai/claude-code-linux-arm64-musl",
-        "url": "https://registry.npmjs.org/@anthropic-ai/claude-code-linux-arm64-musl/-/claude-code-linux-arm64-musl-2.1.114.tgz",
-        "hash": "sha512-rEyufGIlBYIjHWBF0E+vL0nMO5kh/nT9pftOvDW8wDRS7GN67dBWQvWRVZ9q5PTSNh1urCi1ZWDL/Rc6HSzxcg=="
-      },
-      "x86_64-darwin": {
-        "package": "@anthropic-ai/claude-code-darwin-x64",
-        "url": "https://registry.npmjs.org/@anthropic-ai/claude-code-darwin-x64/-/claude-code-darwin-x64-2.1.114.tgz",
-        "hash": "sha512-1k3shOIjp1ra/URMbGiqUxJ/prbwfQdjg1Ms2SPlX2Mxo/NCNg+S5K0d4BfC/xUB3fYOe1OuoE3qbY4WKZPkiQ=="
-      },
-      "aarch64-darwin": {
-        "package": "@anthropic-ai/claude-code-darwin-arm64",
-        "url": "https://registry.npmjs.org/@anthropic-ai/claude-code-darwin-arm64/-/claude-code-darwin-arm64-2.1.114.tgz",
-        "hash": "sha512-TVvlUA3VluCWibN+U9PIbrQrdxyX6tEORawaZnBOsEXzo/fXF8C61NgUN6KlZedgGZATrRflv3w+Im2vw+kfcg=="
-      }
-    }
+    "url": "https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-2.1.123.tgz",
+    "hash": "sha512-31P5v1NOrJF8Cud5P5nuqYSP3XjJdR/PfCQgDM7fCIHbh+34Ds/DWaLjhdqcyUnZ0PINnEpvk/+MM8DhbXOUlw=="
   },
   "meta": {
     "description": "Use Claude, Anthropic's AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
